@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 //Using routes
 app.use('/', routes)
 
-//Starting server
+//Starting
 app.listen(5050,()=>{
     console.log("Server Started");
 });

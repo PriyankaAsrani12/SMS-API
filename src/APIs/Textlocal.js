@@ -44,7 +44,7 @@ async function sendsms (toNumber,from,msg,method,sender_id,customer_id){
                     createdBy:sender_id
                 });
             }else{
-                //Error in sending message
+                //Error in sending
                 const user=await Sms_table.create({
                     customer_id:customer_id,
                     send_sms_to:toNumber,

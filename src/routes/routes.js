@@ -53,7 +53,7 @@ app.get("/sms/:code",(req,res)=>{
         }
     }
     else{
-        res.send("Check your details");
+        res.send("Check your details")
     }
 });
 
@@ -96,6 +96,7 @@ app.get("/sms/api/textlocal",(req,res)=>{
     }else{
         TextlocalSendSms(params.to,params.from,params.body,params.method,params.sender_id,params.customer_id)
         myresult=localStorage.getItem("result")
+       
         if(myresult=="error"){
             res.send("Error")
         }else{
