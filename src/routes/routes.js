@@ -10,18 +10,6 @@ const TwilioSendSms = require("../APIs/Twilio");
 params=undefined;
 err_key="";
 
-//Swagger definition
-/**
- * @swagger
- * /sms:
- *  get:
- *      description: Various sms APIs
- *      tags:
- *      - Sms
- *      responses:
- *         '200':
- *              description: Successfully sent sms
- */
 
 //Routes
 app.get("/sms/:code",(req,res)=>{

@@ -30,6 +30,7 @@ client.messages
             send_sms_error:"No error",
             createdBy:sender_id
         });  
+        console.log("No")
     })
     .catch(async(error)=>{
         //Error in sending message
@@ -43,6 +44,7 @@ client.messages
             createdBy:sender_id
         });
         localStorage.setItem("result","error")
+        console.log(error)
     })
 }
 

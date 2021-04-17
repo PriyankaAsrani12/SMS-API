@@ -38,6 +38,27 @@ app.use('/web', express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+
+//Swagger definition
+/**
+ * @swagger
+ * /sms/{code}:
+ *  get:
+ *      description: Various sms APIs
+ *      tags:
+ *      - Sms
+ *      parameters:
+ *      - name: code
+ *        in: path
+ *        description: JWT code
+ *        required: true
+ *        type: string
+ *        example: twilio-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0byI6Iis5MTc4NzUxOTIzNTgiLCJmcm9tIjoiKzE2NjcyMTM2NDEwIiwic2VuZGVyX25hbWUiOiJveWVzdGVyc190cmFpbmluZyIsImJvZHkiOiJUaGlzIGlzIHRyaWFsIGJvZHkiLCJtZXRob2QiOiJ0d2lsaW8iLCJzZW5kZXJfaWQiOjIsImN1c3RvbWVyX2lkIjoyfQ.XHA1nV6YR4ati_U7glgvQ5Ree9UID0mxvfYqc7JQGSQ
+ *                 textlocal-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0byI6Iis5MTg3NjY1MTY1MjAiLCJmcm9tIjoiT1lFU1RSIiwiYm9keSI6IkRlYXIlMjBBdHRlbmRlZSUyQyUwQVdlJTIwaGF2ZSUyMHJlY2VpdmVkJTIwcGF5bWVudCUyMG9mJTIwUnMlMjAxJTIwYWdhaW5zdCUyMHlvdXIlMjBwdXJjaGFzZSUyMG9mJTIwMSUyMHNlYXQlMjBmb3IlMjBUZXh0TG9jYWwuJTBBVGhhbmslMjB5b3UlMjBmb3IlMjByZWdpc3RlcmluZyUyMSUyMEZ1cnRoZXIlMjBkZXRhaWxzJTIwd2lsbCUyMGJlJTIwY29udmV5ZWQlMjB0byUyMHlvdSUyMHZpYSUyMEVtYWlsJTIwYW5kJTIwU01TJTIwMSUyMGRheSUyMHByaW9yJTIwdG8lMjB0aGUlMjB3ZWJpbmFyLiUwQVJlZ2FyZHMlMkMlMEFPeWVzdGVycyUyMFRyYWluaW5nIiwibWV0aG9kIjoidGV4dGxvY2FsIiwic2VuZGVyX2lkIjoxMjMsImN1c3RvbWVyX2lkIjoxMjN9.5B7GaWrbMPhuYHKBD4XmgNfq93Y8PAY3MbvHR4VtQ-s
+ *      responses:
+ *         '200':
+ *              description: Successfully sent sms
+ */
 //Using routes
 app.use('/', routes)
 
