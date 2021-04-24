@@ -24,7 +24,7 @@ const swaggerOptions={
             contact: {
                 name: "Priyanka Asrani",
             },
-            servers: ["http://localhost:5000"]
+            servers: ["http://localhost:5050"]
         }
     },
     apis: ["index.js"]
